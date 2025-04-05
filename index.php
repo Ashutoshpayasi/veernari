@@ -67,6 +67,104 @@
 
 </style>
 
+<section class="main-banner">
+        <div class="main-banner__bg" style="background-image: url(assets/images/banner/banner.png);"></div>
+        <!-- <div class="container">
+            <div class="main-banner__content">
+                <h1 class="main-banner__title">VeerNari Shakti Resettlement Foundation</h1>
+                <p class="main-banner__text">Empowering the Families of Our Brave Soldiers</p>
+                <a href="about.php" class="thm-btn main-banner__btn">Learn More</a>
+            </div>
+        </div> -->
+</section>
+
+<style>
+.main-banner {
+    position: relative;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.main-banner__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    aspect-ratio: 16/9;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.main-banner__content {
+    z-index: 1;
+}
+
+.main-banner__title {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.main-banner__text {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.main-banner__btn {
+    font-size: 16px;
+    padding: 8px 16px;
+}
+
+/* Medium screens (≤768px) */
+@media (max-width: 768px) {
+    .main-banner {
+        height: 400px;
+    }
+    .main-banner__title {
+        font-size: 36px;
+    }
+
+    .main-banner__text {
+        font-size: 18px;
+    }
+
+    .main-banner__bg {
+        background-image: url(assets/images/banner/banner.png);
+        background-size: contain;
+        background-position: center;
+    }
+}
+
+/* Small screens (≤576px) */
+@media (max-width: 576px) {
+    .main-banner__title {
+        font-size: 28px;
+    }
+
+    .main-banner__text {
+        font-size: 16px;
+    }
+
+    .main-banner__btn {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    .main-banner__bg {
+        background-image: url(assets/images/banner/banner.png);
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+</style>
+
     <!--Main Slider Start-->
     <!-- <section class="page-header">
         <div class="page-header-bg">
@@ -77,7 +175,7 @@
     </section> -->
 
 
-
+                <!-- 
     <section class="main-slider-three clearfix">
         <div class="swiper-container thm-swiper__slider" data-swiper-options='{"slidesPerView": 1, "loop": true,
                 "effect": "fade",
@@ -97,14 +195,14 @@
 
                 <div class="swiper-slide">
                     <div class="image-layer-three" style="background-image: url(assets/images/banner/banner.png);"></div>
-                    <!-- /.image-layer -->
+                    
                     <div class="main-slider-three-color"></div>
                     <div class="container">
 
                     </div>
                 </div>
 
-                <!-- <div class="swiper-slide">
+                <div class="swiper-slide">
                     <div class="image-layer-three" style="background-image: url(assets/images//logo/Veer\ Nari\ Shakti\ Banner.jpg);"></div>
                     
                     <div class="main-slider-three-color"></div>
@@ -121,16 +219,16 @@
 
                     </div>
                 </div>
- -->
 
 
             </div>
 
-            <!-- If we need navigation buttons -->
+
 
 
         </div>
     </section>
+    -->
 
     
 
@@ -178,11 +276,10 @@
     <div class="container">
         <div class="row">
         <div class="col-xl-6">
-    <div class="about-one__left" style="height: 350px; display: flex; flex-direction: column; justify-content: center;">
+    <div class="about-one__left" style="display: flex; flex-direction: column; justify-content: center;">
         <div class="section-title text-left" style='margin-bottom: 0px;'>
             <h2 class="section-title__title" style='font-size:35px'>Together, We Make a Difference</h2>
-        </div>
-        <p class="about-one__text" style='font-size: 20px;text-align: justify;'>
+            <p class="about-one__text" style='font-size: 20px;text-align: justify;'>
             At VeerNari Shakti Resettlement Foundation, we are committed to uplifting, supporting, and empowering the brave VeerNaris. 
             Our mission is to help them reclaim their rights, rebuild their lives, and create sustainable livelihoods that honor their resilience and sacrifices.
         </p>
@@ -192,6 +289,7 @@
             ✅ <strong>Across 24 States</strong><br>
             ✅ <strong>Impacting 2.2 Million Lives</strong>
         </p>
+        </div>
     </div>
 </div>
 
