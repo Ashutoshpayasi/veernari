@@ -54,6 +54,27 @@
     <link rel="stylesheet" href="assets/css/oxpins.css" />
 </head>
 
+<style>
+    .founder-section {
+  --oxpins-base: #00715d; /* replace with your actual variable if needed */
+}
+
+.founder-img {
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.founder-content p {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+.founder-heading {
+  color: white;
+  font-weight: 700;
+}
+
+</style>
+
 <body class="custom-cursor">
 
     <?php include 'includes/header.php'; ?>
@@ -77,39 +98,32 @@
 
     <!--About Four Start-->
   <!--About Four Start-->
-  <section class="about-four">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-6">
-                    <div class="about-four__left">
-                        <div class="about-four__img-box">
-                            <div class="about-four__img">
-                                <img src="assets/images//banner/collage.png" style="height:500px;width:600px" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-6">
-                    <div class="about-four__right">
-                        <div class="section-title text-left">
-                                <h2 class="section-title__title" style="font-size:24px; text-transform: uppercase;">
-                                   Honoring Sacrifice, Securing Futures</h2>
-                        </div>
-                        <p class="about-four__text" style="text-align: justify;">VeerNari Shakti Resettlement Foundation (VSRF) emerged from the resonating echoes of the
-                             Kargil War of 1999, registered in 2016-a beacon of hope for India's Silent Guardians: the Martyr's Widows (Battle Casualty, War Widows,
-                              Physical Casualty) and their Families, Diasbled Soldiers and their  Families, Special Need Children, Families 
-                              of Soldiers and Veterans. With an unwavering commitment to provide swift Grief Support, Psychological Care, and Comprehensive Rehabilitation, VSRF paves the way for a 'Dignified  Life' through Sustainable livelihood opportunities.
-                               Rooted in empathy and driven by empowerment, we ensure that those who gave their all are not forgotten and their families never left to walk alone.
-                        </p>
-                        
-                       
-
-
-                    </div>
-                </div>
-            </div>
+  <section class="founder-section py-5" style="background-color: var(--oxpins-base); color: white;">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h2 class="fw-bold" style='color: white;'>Prashant Tewari: Igniting Flames of Valor for India’s Veernaris</h2>
+    </div>
+    <div class="row justify-content-center align-items-start">
+      <div class="col-md-4 text-center mb-4 mb-md-0">
+        <img src="assets/images/banner/about.png" alt="Prashant Tewari" class="img-fluid rounded shadow founder-img">
+      </div>
+      <div class="col-md-8">
+        <div class="founder-content p-3">
+          <p style='color: white;'>
+            <strong>Prashant Tewari</strong>, the fiery soul behind the VeerNari Shakti Resettlement Foundation (VSRF), burns with a vow: no martyr’s family will fade unseen. Son of (Late) Major B.S. Tewari – a war-scarred hero of the 1965 and 1971 Indo-Pak wars – he forged VSRF after Kargil (1999), turning personal limits into a blazing crusade. Denied a uniform, his heartbeat became the drumroll of dignity for rural Veernaris and disabled soldiers.
+          </p>
+          <p style='color: white;'>
+            VSRF is a trailblazer – many initiatives first in India, a few first in the world. Instant grief counseling heals broken hearts, Drone Pilot Training (India’s first for widows, 2023) sends them soaring, while skill labs, legal shields, and scholarships – some globally unmatched – carve futures for martyrs’ kids and disabled kin. From stitching hope to rewriting skies, Tewari crafts warriors of resilience. His fire leaps borders – Nepal, Sri Lanka, Bhutan – igniting a worldwide tribute to the fallen.
+          </p>
+          <p style='color: white;'>
+            <em>“Likes won’t lift them—action will,”</em> he suggests, daring fellow Citizens, Companies, and Leaders to root deep at the grassroots. Their blood secured our freedom; we all owe them a lifeline. With VSRF, every Veernari rises, every sacrifice sings — Mr. Tewari doesn’t just promise change; he unleashes it. <strong>Join the blaze!</strong>
+          </p>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</section>
+
     <!--About Four End-->
 
     
@@ -119,7 +133,7 @@
     <!-- About Three Start -->
     <section class="causes-five" id="donations">
     <div class="container">
-    <div class="section-title text-center">
+    <div class="section-title text-center" style='margin-top: 50px;'>
         <h2 class="section-title__title">Visionary Leadership Committed to Excellence</h2>
     </div>
     <div class="row">
@@ -133,23 +147,24 @@
                 </div>
             </div>
         </div>
+        
         <div class="col-lg-4 col-md-6 col-sm-12">
             <div class="team-card">
-                <img src="/assets/images/team/2.jpg" alt="Vice President" class="team-image">
+                <img src="assets/images/banner/president.jpg" alt="Advisory Team" class="team-image">
                 <div class="team-content">
-                    <h3 class="team-name">Mrs. Varsha</h3>
-                    <p class="team-title">Vice President</p>
-                    <p class="team-bio">A strategic leader with 10+ years in leadership, Mrs. Varsha ensures the foundation's operations run efficiently and effectively to support VeerNaris.</p>
+                    <h3 class="team-name">Mrs.Varsha Tewari</h3>
+                    <p class="team-title">President</p>
+                    <p class="team-bio">Our operation team consists of experienced professionals providing valuable insights and guidance to drive our mission forward.</p>
                 </div>
             </div>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12">
             <div class="team-card">
-                <img src="assets/images/team/vicepresident.jpg" alt="Advisory Team" class="team-image">
+                <img src="assets/images/banner/vol1.jpg" alt="Vice President" class="team-image">
                 <div class="team-content">
-                    <h3 class="team-name">Ms. Manvika</h3>
+                    <h3 class="team-name">VeerNari Himakshi</h3>
                     <p class="team-title">Operations Lead</p>
-                    <p class="team-bio">Our operation team consists of experienced professionals providing valuable insights and guidance to drive our mission forward.</p>
+                    <p class="team-bio">A strategic leader with 10+ years in leadership, Mrs. Varsha ensures the foundation's operations run efficiently and effectively to support VeerNaris.</p>
                 </div>
             </div>
         </div>
@@ -213,13 +228,13 @@
                 <img src="assets/images/team/prasanttiwari.jpg" width="100px" height="100px" />
             </label>
             <label for="m2" class="tile">
-                <img src="assets/images/team/varsha.jpeg" width="100px" height="100px" />
+                <img src="assets/images/banner/president.jpg" width="100px" height="100px" />
             </label>
             <label for="m3" class="tile">
                 <img src="assets/images/team/advisory.jpg" width="100px" height="100px" />
             </label>
             <label for="m4" class="tile">
-                <img src="assets/images/team/vicepresident.jpg" width="100px" height="100px" />
+                <img src="assets/images/banner/vol1.jpg" width="100px" height="100px" />
             </label>
         </div>
 
@@ -233,10 +248,10 @@
                 <div class="card">
                     <img src="assets/images/team/prasanttiwari.jpg" width="1413px" height="370px" class="avatar" />
                     <div class="info">
-                        <div class="name">Mr. Prashant Tiwari</div>
+                        <div class="name">Mr. Prashant Tewari</div>
                         <div class="title">Founder</div>
                         <div class="bio">
-                            <p>Mr. Prashant Tiwari is the visionary founder of our organization, leading with innovation and dedication. With a strong background in business strategy and leadership, he has played a pivotal role in establishing the company’s foundation and guiding it toward success.</p>
+                            <p>Mr. Prashant Tewari is the visionary founder of our organization, leading with innovation and dedication. With a strong background in business strategy and leadership, he has played a pivotal role in establishing the company’s foundation and guiding it toward success.</p>
                             <p>His expertise spans multiple industries, and his commitment to excellence has earned him recognition for his contributions. Under his leadership, the company has grown into a well-respected entity, driven by a mission of excellence and innovation.</p>
                         </div>
                     </div>
@@ -245,12 +260,12 @@
                 <!-- Vice President -->
                 <input type="radio" id="m2" name="members" />
                 <div class="card">
-                    <img src="assets/images/team/varsha.jpeg" class="avatar" />
+                    <img src="assets/images/banner/president.jpg" width="1413px" height="370px" class="avatar" />
                     <div class="info">
-                        <div class="name">Ms. Varsha Tiwari</div>
-                        <div class="title">Vice President</div>
+                        <div class="name">Ms. Varsha Tewari</div>
+                        <div class="title"> President</div>
                         <div class="bio">
-                            <p>Ms. Varsha Tiwari serves as the Vice President, bringing exceptional leadership and strategic expertise to the company. She is instrumental in driving key business decisions, fostering innovation, and ensuring the company's growth and sustainability.</p>
+                            <p>Ms. Varsha Tewari serves as the President, bringing exceptional leadership and strategic expertise to the company. She is instrumental in driving key business decisions, fostering innovation, and ensuring the company's growth and sustainability.</p>
                             <p>With years of experience in management and operations, she has been a driving force behind the company’s success. Her dedication to excellence and innovation ensures the company remains at the forefront of industry advancements.</p>
                         </div>
                     </div>
@@ -273,12 +288,12 @@
                 <!-- Operations Lead -->
                 <input type="radio" id="m4" name="members" />
                 <div class="card">
-                    <img src="assets/images/team/vicepresident.jpg" width="1013px" height="370px" class="avatar" />
+                    <img src="assets/images/banner/vol1.jpg" width="1013px" height="370px" class="avatar" />
                     <div class="info">
-                        <div class="name">Ms. Manvika</div>
+                        <div class="name">VeerNari Himakshi</div>
                         <div class="title">Operations Lead</div>
                         <div class="bio">
-                            <p>Ms. Manvika is the Operations Lead, ensuring smooth execution of business processes and operational efficiency. With a strong background in management, she oversees daily operations, streamlining workflows, and optimizing productivity.</p>
+                            <p> VeerNari Himakshi is the Operations Lead, ensuring smooth execution of business processes and operational efficiency. With a strong background in management, she oversees daily operations, streamlining workflows, and optimizing productivity.</p>
                             <p>Her attention to detail and problem-solving abilities contribute significantly to the company’s growth and success. She is dedicated to enhancing operational performance and driving continuous improvement.</p>
                         </div>
                     </div>

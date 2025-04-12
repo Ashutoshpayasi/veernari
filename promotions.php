@@ -113,7 +113,7 @@
                             <i class="fas fa-newspaper service-icon text-primary"></i>
                             <h5 class="card-title service-tagline">International Media</h5>
                             <p class="card-text">Ordinary people from India & abroad share their feelings & aspirations with Sputnik.</p>
-                            <a href="https://sputniknews.in/sputnik-specials/" class="btn btn-outline-primary" target="_blank">Learn More</a>
+                            <a href="https://sputniknews.in/20230407/there-was-just-darkness-ahead-indias-youngest-military-widow-opens-up-on-grief-1446710.html" class="btn btn-outline-primary" target="_blank">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -177,6 +177,81 @@
                         </div>
                     </div>
                 </div>
+                <div class="col">
+  <div class="card service-card">
+    <div class="card-body text-center">
+      <!-- You can replace this icon with an actual image/icon if available -->
+      <i class="fas fa-newspaper service-icon text-primary"></i> <!-- Icon placeholder for 'The CEO MAGAZINE' -->
+      <h5 class="card-title service-tagline">The CEO Magazine</h5>
+      <p class="card-text">Link to The CEO Magazine article</p>
+      <a href="https://www.theceo.in/press-release/veernari-shakti-resettlement-foundation-empowering-the-unsung-heroes-of-indias-bravehearts" class="btn btn-outline-primary" target="_blank" rel="noopener">Learn More</a>
+    </div>
+  </div>
+  
+</div>
+<div class="col">
+  <div class="card service-card">
+    <div class="card-body text-center">
+      <i class="fas fa-newspaper service-icon text-primary"></i>
+      <h5 class="card-title service-tagline">Yahoo News</h5>
+      <p class="card-text">"Veernari Shakti Resettlement Foundation: Empowering the Unsung Heroes of India's Bravehearts"</p>
+      <a href="https://www.sangritoday.com/spotlight/veernari-shakti-resettlement-foundation-empowering-the-unsung-heroes-of-indias-bravehearts" class="btn btn-outline-primary" target="_blank" rel="noopener">Learn More</a>
+    </div>
+  </div>
+</div>
+<div class="col">
+  <div class="card service-card">
+    <div class="card-body text-center">
+      <i class="fas fa-newspaper service-icon text-primary"></i>
+      <h5 class="card-title service-tagline">Dailyhunt News</h5>
+      <p class="card-text">Empowering the unsung heroes of India’s bravehearts</p>
+      <a href="https://m.dailyhunt.in/news/india/english/sangri+today-epaper-dhca0872bf801748bd9f43791084210e94/veernari+shakti+resettlement+foundation+empowering+the+unsung+heroes+of+indias+bravehearts-newsid-dhca0872bf801748bd9f43791084210e94_2715dc709e6e11ef9e5e8e88e23b9b8b?sm=Y" class="btn btn-outline-primary" target="_blank" rel="noopener">
+        Read More
+      </a>
+    </div>
+  </div>
+</div>
+<div class="col">
+  <div class="card service-card">
+    <div class="card-body text-center">
+      <i class="fas fa-newspaper service-icon text-primary"></i>
+      <h5 class="card-title service-tagline">IANS Wire Service</h5>
+      <p class="card-text">Empowering the unsung heroes of India’s bravehearts.</p>
+      <a href="https://ians.in/vmpl/veernari-shakti-resettlement-foundation-empowering-the-unsung-heroes-of-indias-bravehearts" class="btn btn-outline-primary" target="_blank" rel="noopener">Learn More</a>
+    </div>
+  </div>
+</div>
+<div class="col">
+  <div class="card service-card">
+    <div class="card-body text-center">
+      <i class="fas fa-newspaper service-icon text-primary"></i>
+      <h5 class="card-title service-tagline">Real Voice Of India</h5>
+      <p class="card-text">Empowering the Unsung Heroes of India’s Bravehearts</p>
+      <a href="https://english.revoi.in/veernari-shakti-resettlement-foundation-empowering-the-unsung-heroes-of-indias-bravehearts/" class="btn btn-outline-primary" target="_blank" rel="noopener">Learn More</a>
+    </div>
+  </div>
+</div>
+<div class="col">
+  <div class="card service-card">
+    <div class="card-body text-center">
+      <i class="fas fa-newspaper service-icon text-primary"></i>
+      <h5 class="card-title service-tagline">Navbharat Article</h5>
+      <p class="card-text">Featured story on the inspiring journeys of three brave women warriors.</p>
+      <a href="https://navbharattimes.indiatimes.com/other/sunday-nbt/special-story/stories-of-3-brave-ladies/articleshow/66794428.cms" class="btn btn-outline-primary" target="_blank" rel="noopener">Read Article</a>
+    </div>
+  </div>
+</div>
+<div class="col">
+  <div class="card service-card">
+    <div class="card-body text-center">
+      <i class="fas fa-newspaper service-icon text-danger"></i>
+      <h5 class="card-title service-tagline">Aaj Tak</h5>
+      <p class="card-text">Aaj Tak highlights Veer Naris' strength and sacrifice in a powerful feature.</p>
+      <a href="https://www.aajtak.in/interactive/photo-essay/Indian-army-jawan-martyered-army-men-veernaris-military-shaheed-central-govt-ntc-85-31-08-2023" class="btn btn-outline-danger" target="_blank" rel="noopener noreferrer">Read Article</a>
+    </div>
+  </div>
+</div>
+
             </div>
         </section>
 

@@ -54,6 +54,134 @@
     <link rel="stylesheet" href="assets/css/oxpins.css" />
 </head>
 
+<style>
+  /* Base Styles */
+  body {
+    background-color: #eee;
+  }
+  .hello {
+    opacity: 1 !important;
+  }
+
+  /* Fullscreen Overlay */
+  .full {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .full .content {
+    width: 50vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Image & Video in Full View */
+  .full .content img,
+  .full .content video {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+    animation: zoomin 1s ease;
+  }
+
+  /* Hidden Class */
+  .byebye {
+    opacity: 0;
+  }
+  .byebye:hover {
+    transform: scale(0.2) !important;
+  }
+
+  /* Gallery Grid */
+  .gallery {
+    display: grid;
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: 8px;
+  }
+
+  /* Image Styles */
+  .gallery img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 16px #333;
+    transition: all 1.5s ease;
+  }
+  .gallery img:hover {
+    box-shadow: 0 0 32px #333;
+  }
+
+  /* Video Styles */
+  .gallery video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 16px #333;
+    transition: all 1.5s ease;
+    display: block;
+  }
+  .gallery video:hover {
+    box-shadow: 0 0 32px #333;
+  }
+
+  /* Gallery Items */
+  .gallery .content {
+    padding: 4px;
+  }
+  .gallery .gallery-item {
+    transition: all 0.5s ease;
+    cursor: pointer;
+  }
+  .gallery .gallery-item:hover {
+    transform: scale(1.025);
+  }
+
+  /* Responsive Grid */
+  @media (max-width: 600px) {
+    .gallery {
+      grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    }
+  }
+  @media (max-width: 400px) {
+    .gallery {
+      grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+    }
+  }
+
+  /* Zoom-in Animation */
+  @keyframes zoomin {
+    0% {
+      max-width: 50%;
+      transform: rotate(-30deg);
+      filter: blur(4px);
+    }
+    30% {
+      filter: blur(4px);
+      transform: rotate(-80deg);
+    }
+    70% {
+      max-width: 50%;
+      transform: rotate(45deg);
+    }
+    100% {
+      max-width: 100%;
+      transform: rotate(0deg);
+    }
+  }
+</style>
+
 <body class="custom-cursor">
 
     <?php include('includes/header.php'); ?>
@@ -68,7 +196,7 @@
                     <li><span>/</span></li>
                     <li class="active">Pages</li>
                 </ul>
-                <h2>Gallery</h2>
+             
             </div>
         </div>
     </section>
@@ -79,256 +207,117 @@
     <!--Page Header End-->
 
     <!--Gallery Page Start-->
-    <style>
-        .section-title__title {
-            position: relative;
-            display: inline-block;
-        }
-
-        .section-title__title::before,
-        .section-title__title::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-
-            width: 50%;
-
-            height: 2px;
-            /* Thickness of the lines */
-            background-color: #000;
-            /* Color of the lines */
-        }
-
-        .section-title__title::before {
-            left: -50%;
-            /* Starts from the middle-left */
-        }
-
-        .section-title__title::after {
-            right: -50%;
-            /* Starts from the middle-right */
-        }
-    </style>
-
-    <section class="gallery-page">
-        <div class="section-title text-center">
-            <h2 class="section-title__title">WHAT'S NEW AT VSRF</h2>
-
-        </div>
-        <div class="container">
+    
 
 
-            <div class="row">
-                <!--Gallery Page Single Start-->
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                    <div class="gallery-page__single">
-                        <div class="gallery-page__img">
-                            <img src="assets\images\soldiers\1_ Ghat Banner Maj Vishnoi.jpeg" alt="">
-                            <a href="assets\images\soldiers\1_ Ghat Banner Maj Vishnoi.jpeg" class="img-popup"></a>
-                            <span class="zoom-icon">+</span> 
-                            <!-- /.img-popup -->
-                          
+        <section style="width: 90%; align-items: center; margin: auto;">
+       <div class="container">
+       <h2 class="text-success text-center fw-bold" style="margin-top: 50px;">
+    Our Gallery
+  </h2>
+  <div class="gallery" id="gallery" style="margin-top: 50px;">
+    <div class="gallery-item" style="grid-row-end: span 24;">
+      <div class="content">
+        <img src="assets/images/soldiers/1_ Ghat Banner Maj Vishnoi.jpeg" alt="" />
+      </div>
+    </div>
+    <div class="gallery-item" style="grid-row-end: span 14;">
+      <div class="content">
+        <img src="assets/images/soldiers/Army truck banner 2023-01-24 at 19.41.04.jpeg" alt="" />
+      </div>
+    </div>
+    <div class="gallery-item" style="grid-row-end: span 23;">
+      <div class="content">
+        <img src="assets/images/soldiers/banner Image 2022-07-11 at 11.42.26 AM.jpeg" alt="" />
+      </div>
+    </div>
+    <div class="gallery-item" style="grid-row-end: span 30;">
+      <div class="content">
+        <img src="assets/images/army logo/gallery/full-shot-soldiers-war-zone_23-2150804361.jpg" alt="" />
+      </div>
+    </div>
+    <div class="gallery-item" style="grid-row-end: span 30;">
+      <div class="content">
+        <video src="assets/images/soldiers/1.mp4" controls="" autoplay="" muted=""
+        ></video>
+      </div>
+    </div>
+    <div class="gallery-item" style="grid-row-end: span 23;">
+      <div class="content">
+        <img src="assets/images/soldiers/banner SO Col. Vijay Mishra Sept 23.jpeg" alt="" />
+      </div>
+    </div>
+    <div class="gallery-item" style="grid-row-end: span 26;">
+      <div class="content">
+        <img src="assets/images/soldiers/Banner_Major Mustafa_23 Oct_2022 (1).jpeg" alt="" />
+      </div>
+    </div>
+    <div class="gallery-item" style="grid-row-end: span 18;">
+      <div class="content">
+        <img src="assets/images/soldiers/Self-defence.png" alt="" />
+      </div>
+    </div>
+    <div class="gallery-item" style="grid-row-end: span 12;">
+      <div class="content">
+        <img src="assets/images/soldiers/Hindi front banner 5 x 5_sept 2023.jpeg" alt="" />
+      </div>
+    </div>
+    <div class="gallery-item" style="grid-row-end: span 30;">
+      <div class="content">
+        <img src="assets/images/soldiers/banner_Major Mustafa_23 Oct_2022 (2).jpeg" alt="" />
+      </div>
+    </div>
+    <div class="gallery-item" style="grid-row-end: span 18;">
+      <div class="content">
+        <img src="assets/images/soldiers/Self-defence.png" alt="" />
+      </div>
+    </div>
+    <div class="gallery-item" style="grid-row-end: span 12;">
+      <div class="content">
+        <img src="assets/images/soldiers/Hindi front banner 5 x 5_sept 2023.jpeg" alt="" />
+      </div>
+    </div>
+    <div class="gallery-item" style="grid-row-end: span 30;">
+      <div class="content">
+        <img src="assets/images/soldiers/banner_Major Mustafa_23 Oct_2022 (2).jpeg" alt="" />
+      </div>
+    </div>
+    <div class="gallery-item" style="grid-row-end: span 18;">
+      <div class="content">
+        <img src="assets/images/soldiers/Self-defence.png" alt="" />
+      </div>
+    </div>
+    <div class="gallery-item" style="grid-row-end: span 12;">
+      <div class="content">
+        <img src="assets/images/soldiers/Hindi front banner 5 x 5_sept 2023.jpeg" alt="" />
+      </div>
+    </div>
+    <div class="gallery-item" style="grid-row-end: span 30;">
+      <div class="content">
+        <img src="assets/images/soldiers/banner_Major Mustafa_23 Oct_2022 (2).jpeg" alt="" />
+      </div>
+    </div>
+    <div class="gallery-item" style="grid-row-end: span 18;">
+      <div class="content">
+        <img src="assets/images/soldiers/Self-defence.png" alt="" />
+      </div>
+    </div>
+    <div class="gallery-item" style="grid-row-end: span 12;">
+      <div class="content">
+        <img src="assets/images/soldiers/Hindi front banner 5 x 5_sept 2023.jpeg" alt="" />
+      </div>
+    </div>
+    <div class="gallery-item" style="grid-row-end: span 30;">
+      <div class="content">
+        <img src="assets/images/soldiers/banner_Major Mustafa_23 Oct_2022 (2).jpeg" alt="" />
+      </div>
+    </div>
+  </div>
+       </div>
+</section>
 
-                        </div>
-                    </div>
-                </div>
-                <!--Gallery Page Single End-->
-                <!--Gallery Page Single Start-->
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                    <div class="gallery-page__single">
-                        <div class="gallery-page__img">
-                            <img src="assets\images\soldiers\Army truck banner 2023-01-24 at 19.41.04.jpeg" alt="">
-                            <a href="assets\images\soldiers\Army truck banner 2023-01-24 at 19.41.04.jpeg" class="img-popup"></a>
-                            <span class="zoom-icon">+</span> 
+       
 
-                        </div>
-                    </div>
-                </div>
-                <!--Gallery Page Single End-->
-                <!--Gallery Page Single Start-->
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                    <div class="gallery-page__single">
-                        <div class="gallery-page__img">
-                            <img src="assets\images\soldiers\banner Image 2022-07-11 at 11.42.26 AM.jpeg" alt="">
-                            <a href="assets\images\soldiers\banner Image 2022-07-11 at 11.42.26 AM.jpeg" class="img-popup"></a>
-                            <!-- /.img-popup -->
-                            <span class="zoom-icon">+</span> 
-
-                            <!-- <div class="gallery-page__content">
-                                <p class="gallery-page__sub-title">Charity</p>
-                                <h5 class="gallery-page__title"><a href="gallery.php">Education</a></h5>
-                            </div> -->
-                        </div>
-                    </div>
-                </div>
-                <!--Gallery Page Single End-->
-                <!--Gallery Page Single Start-->
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                    <div class="gallery-page__single">
-                        <div class="gallery-page__img">
-                            <img src="assets\images\army logo\gallery\full-shot-soldiers-war-zone_23-2150804361.jpg" alt="">
-                            <a href="assets\images\army logo\gallery\full-shot-soldiers-war-zone_23-2150804361.jpg" class="img-popup"></a>
-                            <!-- /.img-popup -->
-                            <span class="zoom-icon">+</span> 
-
-                        </div>
-                    </div>
-                </div>
-                <!--Gallery Page Single End-->
-                <!--Gallery Page Single Start-->
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                    <div class="gallery-page__single">
-                        <div class="gallery-page__img">
-                            <img src="assets\images\soldiers\banner SO Col. Vijay Mishra Sept 23.jpeg" alt="">
-                            <a href="assets\images\soldiers\banner SO Col. Vijay Mishra Sept 23.jpeg" class="img-popup"></a>
-                            <!-- /.img-popup -->
-                            <span class="zoom-icon">+</span> 
-
-
-                        </div>
-                    </div>
-                </div>
-                <!--Gallery Page Single End-->
-                <!--Gallery Page Single Start-->
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                    <div class="gallery-page__single">
-                        <div class="gallery-page__img">
-                            <img src="assets\images\soldiers\Banner_Major Mustafa_23 Oct_2022  (1).jpeg" alt="">
-                            <a href="assets\images\soldiers\Banner_Major Mustafa_23 Oct_2022  (1).jpeg" class="img-popup"></a>
-                            <!-- /.img-popup -->
-                            <span class="zoom-icon">+</span> 
-
-                        </div>
-                    </div>
-                </div>
-                <!--Gallery Page Single End-->
-                <!--Gallery Page Single Start-->
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                    <div class="gallery-page__single">
-                        <div class="gallery-page__img">
-                            <img src="assets\images\soldiers/Self-defence.png" alt="">
-                            <a href="assets\images\soldiers/Self-defence.png" class="img-popup"></a>
-                            <!-- /.img-popup -->
-                            <span class="zoom-icon">+</span> 
-
-
-                        </div>
-                    </div>
-                </div>
-                <!--Gallery Page Single End-->
-                <!--Gallery Page Single Start-->
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                    <div class="gallery-page__single">
-                        <div class="gallery-page__img">
-                            <img src="assets\images\soldiers\Hindi front banner 5 x 5_sept 2023.jpeg" alt="">
-                            <a href="assets\images\soldiers\Hindi front banner 5 x 5_sept 2023.jpeg" class="img-popup"></a>
-                            <!-- /.img-popup -->
-                            <span class="zoom-icon">+</span> 
-
-
-                        </div>
-                    </div>
-                </div>
-                <!--Gallery Page Single End-->
-                <!--Gallery Page Single Start-->
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                    <div class="gallery-page__single">
-                        <div class="gallery-page__img">
-                            <img src="assets\images\soldiers\banner_Major Mustafa_23 Oct_2022  (2).jpeg" alt="">
-                            <a href="assets\images\soldiers\banner_Major Mustafa_23 Oct_2022  (2).jpeg" ></a>
-                            <!-- /.img-popup -->
-                            <span class="zoom-icon">+</span> 
-
-
-                        </div>
-                    </div>
-                </div>
-                <!--Gallery Page Single End-->
-            </div>
-        </div>
-    </section>
-    <!--Gallery Page End-->
-
-
-
-    <!--Site Footer Start-->
-    <!-- <section class="video-gallery">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                    <div class="video-gallery__item">
-                        <video controls  width="100%" poster="assets\images\army logo\slider1.jpg">
-                            <source src="assets/images/events/0_Banner Video.mp4" type="video/mp4">
-
-                        </video>
-                    </div>
-                </div>
-                
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                    <div class="video-gallery__item">
-                        <video controls width="100%" poster="">
-                            <source src="assets\images\soldiers\cremation Video 2020-12-19 at 3.13.14 PM.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                </div>
-                
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                    <div class="video-gallery__item">
-                        <video controls width="100%" poster="">
-                            <source src="assets\images\soldiers\Soldier Veer nari shakthi 2.mp4" type="video/mp4">
-
-                        </video>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                    <div class="video-gallery__item">
-                        <video controls width="100%" poster="">
-                            <source src="assets\images\soldiers\आइये सुनते हैं मीडिया द्वारा हमारे सैनिकों पर बनाया एक नवीनतम संगीत एल्बम.mp4" type="video/mp4">
-
-                        </video>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                    <div class="video-gallery__item">
-                        <video controls width="100%" poster="">
-                            <source src="assets/images/events/0_Banner Video.mp4" type="video/mp4">
-
-                        </video>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                    <div class="video-gallery__item">
-                        <video controls width="100%" poster="" style="height: 250px;">
-                            <source src="assets\images\soldiers\0_Video 2022-04-10 at 11.30.09 PM.mp4" type="video/mp4">
-
-                        </video>
-                    </div>
-                </div>
-        
-            </div>
-        </div>
-    </section> -->
-
-    <!-- <style>
-        .video-gallery {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-
-        .video-gallery__item {
-            margin-bottom: 30px;
-            /* Adjust as needed for spacing between rows */
-        }
-
-        .video-gallery__item video {
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            display: block;
-        }
-        
-    </style> -->
     <script>
 
     </script>
@@ -429,6 +418,45 @@
 
     <!-- template js -->
     <script src="assets/js/oxpins.js"></script>
+
+    <script>
+  const gallery = document.querySelector("#gallery");
+
+  const getVal = (elem, style) =>
+    parseInt(window.getComputedStyle(elem).getPropertyValue(style));
+  const getHeight = (item) =>
+    item.querySelector(".content").getBoundingClientRect().height;
+
+  const resizeAll = () => {
+    const rowHeight = getVal(gallery, "grid-auto-rows");
+    const rowGap = getVal(gallery, "grid-row-gap");
+    gallery.querySelectorAll(".gallery-item").forEach((item) => {
+      item.style.gridRowEnd =
+        "span " + Math.ceil((getHeight(item) + rowGap) / (rowHeight + rowGap));
+    });
+  };
+
+  // Handle both images and videos
+  const allMedia = gallery.querySelectorAll("img, video");
+
+  allMedia.forEach((media) => {
+    if (
+      (media.tagName === "IMG" && media.complete) ||
+      media.tagName === "VIDEO"
+    ) {
+      resizeAll();
+    }
+
+    media.addEventListener("load", resizeAll);
+    media.addEventListener("loadeddata", resizeAll); // for video
+  });
+
+  window.addEventListener("resize", resizeAll);
+
+  gallery.querySelectorAll(".gallery-item").forEach((item) => {
+    item.addEventListener("click", () => item.classList.toggle("full"));
+  });
+</script>
 </body>
 
 

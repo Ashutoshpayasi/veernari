@@ -379,7 +379,7 @@
             <div class="col-xl-6">
                 <div class="about-one__left">
                     <div class="section-title text-left" style='margin-bottom: 0px;'>
-                        <h2 class="section-title__title" style='font-size:31px;'>A Journey of Empowerment Across India </h2>
+                        <h2 class="section-title__title" style='font-size:28px;'>A Journey of Empowerment Across India </h2>
                     </div>
                     <p class="about-four__text" style="text-align: justify;">As the train moves across the map, symbolizing our relentless journey, VeerNari Shakti Resettlement Foundation (VSRF) travels through the heart of India, bringing hope, empowerment, and dignity to VeerNaris, disabled soldiers, and their families. From the valleys of Kashmir to the coastal lands of Kanyakumari,
                              our mission unfolds in every corner of the nation, ensuring that no family of a braveheart is left behind.</p>
@@ -395,7 +395,7 @@ Every station we stop at represents a new story, a new life impacted.
             <div class="col-xl-6 position-relative">
                 <div class="about-one__right">
                     <div class="map-container">
-                        <img src="assets/images/logo/Comp 1.gif" class="img-fluid" alt="India Map">
+                        <img src="assets/images/banner/mapanimation.gif" class="img-fluid" alt="India Map">
                        
                     </div>
                 </div>
@@ -511,6 +511,16 @@ Every station we stop at represents a new story, a new life impacted.
                     }
                 }}'>
                 <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                        <a href="https://joinindianarmy.nic.in" target="_blank">
+                            <img src="assets/images/army logo/indian-army.png" style="height: 120px;" alt="Indian Army">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="https://www.joinindiannavy.gov.in" target="_blank">
+                            <img src="assets/images/army logo/Indian_Navy_logo-150x150.png" alt="Indian Navy">
+                        </a>
+                    </div>
                     <div class="swiper-slide">
                         <a href="https://www.assamrifles.gov.in" target="_blank">
                             <img src="assets/images/army logo/Assam-rifles-logo-150x150.jpg" alt="Assam Rifles">
@@ -521,16 +531,8 @@ Every station we stop at represents a new story, a new life impacted.
                             <img src="assets/images/army logo/BSF-Logo-150x150.jpg" alt="BSF">
                         </a>
                     </div><!-- /.swiper-slide -->
-                    <div class="swiper-slide">
-                        <a href="https://www.joinindiannavy.gov.in" target="_blank">
-                            <img src="assets/images/army logo/Indian_Navy_logo-150x150.png" alt="Indian Navy">
-                        </a>
-                    </div><!-- /.swiper-slide -->
-                    <div class="swiper-slide">
-                        <a href="https://joinindianarmy.nic.in" target="_blank">
-                            <img src="assets/images/army logo/indian-army.png" style="height: 120px;" alt="Indian Army">
-                        </a>
-                    </div><!-- /.swiper-slide -->
+                   <!-- /.swiper-slide -->
+                 <!-- /.swiper-slide -->
                     <div class="swiper-slide">
                         <a href="https://joinindiancoastguard.gov.in" target="_blank">
                             <img src="assets/images/army logo/Indian-coast-guard-logo-150x150.png" alt="Indian Coast Guard">
